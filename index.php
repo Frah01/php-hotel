@@ -1,5 +1,4 @@
 <?php
-
     $hotels = [
 
         [
@@ -40,6 +39,37 @@
 
     ];
 
+
+    function parkings($hotels){
+        $newHotels = [];
+        $parkings= null;
+        if(isset($_GET['parking'])){
+            $parkings = $_GET['parking'];
+        }   
+       
+        if($parkings == '1'){
+            $newHotels= [];
+            foreach($hotels as $hotel){
+                if($hotel['parking']){
+                    array_push($newHotels, $hotel);
+                }
+            }
+            return $newHotels;
+        }
+        elseif ($parkings == '2'){
+            $newHotels= [];
+            foreach($hotels as $hotel){
+                if(!$hotel['parking']){
+                    array_push($newHotels, $hotel);
+                }
+            }
+            return $newHotels;
+        }
+        else{
+            return $hotels;
+        }
+    }
+
 ?>
 
 
@@ -54,7 +84,21 @@
     <title>Document</title>
 </head>
 <body>
-    <table class="table table-bordered">
+    <div class="mt-5 d-flex justify-content-center align-items-center">
+        <form action="index.php" methods="GET" >
+            <div>
+                <input class="form-check-input" type="radio" name="parking"  value="1">
+                <label class="form-check-label" for="park"><h5>Hotel Con Parcheggio</h5></label>
+            </div>
+            <div>
+                <input class="form-check-input" type="radio" name="parking"  value="2">
+                <label class="form-check-label" for="park"><h5>Hotel Senza Parcheggio</h5></label>
+            </div>
+            <button type="submit" class="btn btn-light border">Cerca</button>
+        </form>
+    </div>
+
+    <table class="table table-bordered mt-5">
         <thead class="text-center ">
             <th>Nome</th>
             <th>Descrizione</th>
@@ -70,7 +114,7 @@
             <?php //}} ?> -->
         </thead>
         <tbody> 
-        <?php foreach($hotels as $hotel){?>
+        <?php foreach(parkings($hotels) as $hotel){?>
                 <tr class="text-center">
                     <td><?php echo $hotel['name']; ?></td>
                     <td><?php echo $hotel['description']; ?></td>
