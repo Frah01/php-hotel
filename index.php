@@ -61,30 +61,33 @@
             <th>Parcheggio</th>
             <th>Voto</th>
             <th>Distanza dal centro</th>
+
+            //Ciclo per titoli delle colonne 
+            <!-- <?php
+            // foreach($hotels as $key => $hotel){
+            //     foreach($hotel as $key_two => $item){ ?>
+                <th><?php //echo ($key_two) ?></th>
+            <?php //}} ?> -->
         </thead>
         <tbody> 
         <?php foreach($hotels as $hotel){?>
                 <tr class="text-center">
-                <td><?php echo $hotel['name']; ?></td>
-                <td><?php echo $hotel['description']; ?></td>
-                <td><?php 
-                if($hotel['parking']){
-                    echo 'Sì'; 
-                }
-                else{
-                    echo 'No';
-                }
-                ?>
-                </td>
-                <td><?php echo $hotel['vote']; ?></td>
-                <td><?php echo $hotel['distance_to_center']; ?></td>
-                <?php } ?>
+                    <td><?php echo $hotel['name']; ?></td>
+                    <td><?php echo $hotel['description']; ?></td>
+                    <td><?php 
+                        if($hotel['parking']){
+                            echo 'Sì'; 
+                        }
+                        else{
+                            echo 'No';
+                        }
+                        ?>
+                    </td>
+                    <td><?php echo $hotel['vote']; ?></td>
+                    <td><?php echo $hotel['distance_to_center']; ?></td>
+                    <?php } ?>
                 </tr>
-               
         </tbody>
-        
     </table>
-   
-   
 </body>
 </html>
