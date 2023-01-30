@@ -76,10 +76,10 @@
                     <td><?php echo $hotel['description']; ?></td>
                     <td><?php 
                         if($hotel['parking']){
-                            echo 'Sì'; 
+                            echo 'Hotel con Parcheggio'; 
                         }
                         else{
-                            echo 'No';
+                            echo 'Hotel Senza Parcheggio';
                         }
                         ?>
                     </td>
