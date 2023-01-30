@@ -84,7 +84,7 @@
                         ?>
                     </td>
                     <td><?php echo $hotel['vote']; ?></td>
-                    <td><?php echo $hotel['distance_to_center']; ?></td>
+                    <td><?php echo $hotel['distance_to_center'].' '.'Km'; ?></td>
                     <?php } ?>
                 </tr>
         </tbody>
