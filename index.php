@@ -62,7 +62,7 @@
             <th>Voto</th>
             <th>Distanza dal centro</th>
 
-            //Ciclo per titoli delle colonne 
+            <!--iclo per titoli delle colonne --> 
             <!-- <?php
             // foreach($hotels as $key => $hotel){
             //     foreach($hotel as $key_two => $item){ ?>
