@@ -84,7 +84,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="mt-5 d-flex justify-content-center align-items-center">
+    <div class="mt-5 mx-3">
         <form action="index.php" methods="GET" >
             <div>
                 <input class="form-check-input" type="radio" name="parking"  value="1">
@@ -94,7 +94,9 @@
                 <input class="form-check-input" type="radio" name="parking"  value="2">
                 <label class="form-check-label" for="park"><h5>Hotel Senza Parcheggio</h5></label>
             </div>
-            <button type="submit" class="btn btn-light border">Cerca</button>
+            <div>
+                <button type="submit" class="btn btn-light border">Cerca</button>
+            </div>
         </form>
     </div>
 
