@@ -54,8 +54,8 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
-        <thead>
+    <table class="table table-bordered">
+        <thead class="text-center ">
             <th>Nome</th>
             <th>Descrizione</th>
             <th>Parcheggio</th>
@@ -64,21 +64,24 @@
         </thead>
         <tbody> 
         <?php foreach($hotels as $hotel){?>
-                <tr>
+                <tr class="text-center">
                 <td><?php echo $hotel['name']; ?></td>
                 <td><?php echo $hotel['description']; ?></td>
-                <td><?php echo $hotel['parking']; ?></td>
+                <td><?php 
+                if($hotel['parking']){
+                    echo 'Sì'; 
+                }
+                else{
+                    echo 'No';
+                }
+                ?>
+                </td>
                 <td><?php echo $hotel['vote']; ?></td>
                 <td><?php echo $hotel['distance_to_center']; ?></td>
                 <?php } ?>
                 </tr>
                
         </tbody>
-            
-
-       
-     
-
         
     </table>
    
