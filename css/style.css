@@ -3,3 +3,7 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
+
+.background-color {
+    background-color: rgb(80, 80, 80);
+}

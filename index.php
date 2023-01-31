@@ -83,28 +83,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
-    <div class="mt-5 mx-3">
-        <form action="index.php" methods="GET" >
-            <div>
-                <input class="form-check-input" type="radio" name="parking"  value="1">
-                <label class="form-check-label" for="park"><h5>Hotel Con Parcheggio</h5></label>
+<body class="background-color">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col d-flex">
+                <form class="d-flex align-items-center"action="index.php" methods="GET" >
+                    <div class="mx-2">
+                        <input class="form-check-input" type="radio" name="parking"  value="1">
+                        <label class="form-check-label" for="park"><h5>Hotel Con Parcheggio</h5></label>
+                    </div>
+                    <div class="mx-2">
+                        <input class="form-check-input" type="radio" name="parking"  value="2">
+                        <label class="form-check-label" for="park"><h5>Hotel Senza Parcheggio</h5></label>
+                    </div>
+                    <div class="mx-2">
+                        <input class="form-check-input" type="radio" name="parking"  value="3">
+                        <label class="form-check-label" for="park"><h5>Tutti gli Hotel</h5></label>
+                    </div>
+                    <div class="mx-2">
+                        <button type="submit" class="btn btn-dark border">Cerca</button>
+                    </div>
+                </form>
             </div>
-            <div>
-                <input class="form-check-input" type="radio" name="parking"  value="2">
-                <label class="form-check-label" for="park"><h5>Hotel Senza Parcheggio</h5></label>
-            </div>
-            <div>
-                <input class="form-check-input" type="radio" name="parking"  value="3">
-                <label class="form-check-label" for="park"><h5>Tutti gli Hotel</h5></label>
-            </div>
-            <div>
-                <button type="submit" class="btn btn-light border">Cerca</button>
-            </div>
-        </form>
+        </div>
+       
     </div>
-
-    <table class="table table-bordered table-striped mt-5">
+<div class="container" >
+    <div class="row">
+        <div class="col">
+        <table class="table table-bordered table-striped mt-5">
         <thead class="text-center">
             <th>Nome</th>
             <th>Descrizione</th>
@@ -131,5 +138,9 @@
                 </tr>
         </tbody>
     </table>
+        </div>
+    </div>
+</div>
+    
 </body>
 </html>
