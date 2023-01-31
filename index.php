@@ -95,6 +95,10 @@
                 <label class="form-check-label" for="park"><h5>Hotel Senza Parcheggio</h5></label>
             </div>
             <div>
+                <input class="form-check-input" type="radio" name="parking"  value="3">
+                <label class="form-check-label" for="park"><h5>Tutti gli Hotel</h5></label>
+            </div>
+            <div>
                 <button type="submit" class="btn btn-light border">Cerca</button>
             </div>
         </form>
@@ -108,7 +112,7 @@
             <th>Voto</th>
             <th>Distanza dal centro</th>
 
-            <!--iclo per titoli delle colonne --> 
+            <!--ciclo per titoli delle colonne --> 
             <!-- <?php
             // foreach($hotels as $key => $hotel){
             //     foreach($hotel as $key_two => $item){ ?>
