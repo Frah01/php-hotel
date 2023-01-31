@@ -104,8 +104,8 @@
         </form>
     </div>
 
-    <table class="table table-bordered mt-5">
-        <thead class="text-center ">
+    <table class="table table-bordered table-striped mt-5">
+        <thead class="text-center">
             <th>Nome</th>
             <th>Descrizione</th>
             <th>Parcheggio</th>
@@ -124,15 +124,7 @@
                 <tr class="text-center">
                     <td><?php echo $hotel['name']; ?></td>
                     <td><?php echo $hotel['description']; ?></td>
-                    <td><?php 
-                        if($hotel['parking']){
-                            echo 'Hotel con Parcheggio'; 
-                        }
-                        else{
-                            echo 'Hotel Senza Parcheggio';
-                        }
-                        ?>
-                    </td>
+                    <td><?php echo $hotel['parking'] ? 'Hotel Con Parcheggio' : 'Hotel Senza Parcheggio' ?></td>
                     <td><?php echo $hotel['vote']; ?></td>
                     <td><?php echo $hotel['distance_to_center'].' '.'Km'; ?></td>
                     <?php } ?>
